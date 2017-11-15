@@ -15,7 +15,7 @@
   outline: none;
   background: #33a1d1;
 
-  transition: all 1s ease;
+  transition: all 0.5s ease;
   position: absolute;
 
   z-index: 100;
@@ -31,7 +31,7 @@
   margin-left: 156px;
 }
 
-.text1 {
+.optionAText {
   position: relative;
   width: 50%;
   height: 100%;
@@ -39,7 +39,7 @@
   text-align: center;
 }
 
-.text2 {
+.optionBText {
   position: relative;
   width: 50%;
   height: 100%;
@@ -57,5 +57,24 @@
     rgba(247, 59, 28, 0.69)
   );
   box-shadow: 0 2px 12px 6px rgba(167, 196, 220, 0.5);
+  margin: auto;
+}
+
+.mainDivCorrect {
+  width: 710px;
+  height: 365px;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, #47e4c1, #07cddd);
+  box-shadow: 0 2px 12px 6px rgba(167, 196, 220, 0.5);
+  margin: auto;
+}
+
+.titleText {
+  text-align: center;
+  margin: auto;
+}
+
+.resultText {
+  text-align: center;
   margin: auto;
 }
