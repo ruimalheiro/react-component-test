@@ -4,22 +4,21 @@
   border-radius: 100px;
   border: solid 1px #fbfbfb;
   margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #button {
-  width: 150px;
+  width: 163px;
   height: 45px;
-
-  border-radius: 35px;
+  border-radius: 100px;
   border: none;
   outline: none;
-  background: #33a1d1;
-
+  background-color: rgba(249, 249, 249, 0.5);
+  box-shadow: 0 0 6px 1px rgba(195, 51, 51, 0.5);
   transition: all 0.5s ease;
   position: absolute;
-
   z-index: 100;
-
   opacity: 0.5;
 }
 
@@ -28,10 +27,10 @@
 }
 
 .move {
-  margin-left: 156px;
+  margin-left: 145px;
 }
 
-.optionAText {
+.optionATextDiv {
   position: relative;
   width: 50%;
   height: 100%;
@@ -39,7 +38,7 @@
   text-align: center;
 }
 
-.optionBText {
+.optionBTextDiv {
   position: relative;
   width: 50%;
   height: 100%;
@@ -70,11 +69,55 @@
 }
 
 .titleText {
-  text-align: center;
   margin: auto;
+  font-family: Muli;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
 }
 
-.resultText {
+.The-answer-is-incorr {
+  width: 728px;
+  height: 18px;
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
   text-align: center;
-  margin: auto;
+  color: #ffffff;
+}
+
+.The-answer-is-correc {
+  width: 710px;
+  height: 18px;
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.selectedOptionText {
+  width: 79px;
+  height: 18px;
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #e66549;
+}
+
+.unselectedOptionText {
+  width: 79px;
+  height: 18px;
+  font-family: Muli;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #ffffff;
 }

@@ -8,22 +8,38 @@ export default class Toggle extends Component {
       wrapperClass: 'wrapper',
       buttonClass: null,
       optionA: props.optionA || 'optionA',
-      optionB: props.optionB || 'optionB'
+      optionAClass: 'selectedOptionText',
+      optionB: props.optionB || 'optionB',
+      optionBClass: 'unselectedOptionText'
     };
   }
 
   handleClick(e) {
     e.preventDefault();
 
-    const { buttonClass, optionA, optionB } = this.state;
+    const {
+      buttonClass,
+      optionA,
+      optionAClass,
+      optionB,
+      optionBClass
+    } = this.state;
 
     let selected;
     if (buttonClass) {
       selected = optionA;
-      this.setState({ buttonClass: null });
+      this.setState({
+        buttonClass: null,
+        optionAClass: 'selectedOptionText',
+        optionBClass: 'unselectedOptionText'
+      });
     } else {
       selected = optionB;
-      this.setState({ buttonClass: 'move' });
+      this.setState({
+        buttonClass: 'move',
+        optionAClass: 'unselectedOptionText',
+        optionBClass: 'selectedOptionText'
+      });
     }
 
     if (this.props.onClick) {
@@ -37,7 +53,9 @@ export default class Toggle extends Component {
       wrapperClass,
       buttonClass,
       optionA,
-      optionB
+      optionAClass,
+      optionB,
+      optionBClass
     } = this.state;
 
     return (
@@ -48,8 +66,12 @@ export default class Toggle extends Component {
             className={buttonClass}
             onClick={this.handleClick.bind(this)}
           />
-          <div className="optionAText">{optionA}</div>
-          <div className="optionBText">{optionB}</div>
+          <div className="optionATextDiv">
+            <p className={optionAClass}>{optionA}</p>
+          </div>
+          <div className="optionBTextDiv">
+            <p className={optionBClass}>{optionB}</p>
+          </div>
         </div>
       </div>
     );
